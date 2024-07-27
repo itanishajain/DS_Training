@@ -50,6 +50,7 @@ def user_query():
         return  "Your data is Submitted into the data base!"
 
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
 
