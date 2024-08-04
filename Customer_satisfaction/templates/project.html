@@ -36,131 +36,170 @@
         </div>
     </nav>
 
-    
-    <h2 style="margin-top: 130px;text-align: center;">Enter the Data for Prediction</h2>
+    <div class="container mt-5">
+        <h2 class="text-center">Enter the Data for Prediction</h2>
 
-    <form action="{{ url_for('prediction') }}" method="post"  id="contact-form" style="margin-top: 50px;">
-        <label for="age">Age :</label>
-        <input type="text" name="age" id="age" required><br>
+        <form action="/prediction" method="post" id="contact-form" class="mt-5">
+            <div class="mb-3">
+                <label for="age" class="form-label">Age:</label>
+                <input type="text" name="age" id="age" class="form-control" required>
+            </div>
 
-        <label for="flight-distance">Flight Distance :</label>
-        <input type="text" name="flight_distance" id="flight-distance" required><br>
+            <div class="mb-3">
+                <label for="flight-distance" class="form-label">Flight Distance:</label>
+                <input type="text" name="flight_distance" id="flight-distance" class="form-control" required>
+            </div>
 
-        <label for="inflight-entertainment">Inflight Entertainment :</label>
-        <select id="inflight-entertainment" name="inflight-entertainment"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="inflight-entertainment" class="form-label">Inflight Entertainment:</label>
+                <select id="inflight-entertainment" name="inflight-entertainment" class="form-select" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-        <label for="baggage-handling">Baggage handling :</label>
-        <select id="baggage-handling" name="baggage-handling"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="baggage-handling" class="form-label">Baggage Handling:</label>
+                <select id="baggage-handling" name="baggage-handling" class="form-select" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-        <label for="cleanliness">Cleanliness :</label>
-        <select id="cleanliness" name="cleanliness"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="cleanliness" class="form-label">Cleanliness:</label>
+                <select id="cleanliness" name="cleanliness" class="form-select" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
 
-        <label for="departure-delay">Departure Delay in Minutes :</label>
-        <input type="text" name="departure_delay" id="departure-delay" required><br>
+            <div class="mb-3">
+                <label for="departure-delay" class="form-label">Departure Delay in Minutes:</label>
+                <input type="text" name="departure_delay" id="departure-delay" class="form-control" required>
+            </div>
 
-        <label for="arrival-delay">Arrival Delay in Minutes :</label>
-        <input type="text" name="arrival_delay" id="arrival-delay" required><br>
+            <div class="mb-3">
+                <label for="arrival-delay" class="form-label">Arrival Delay in Minutes:</label>
+                <input type="text" name="arrival_delay" id="arrival-delay" class="form-control" required>
+            </div>
 
-        <label for="gender">Gender :</label>
-        <select id="gender" name="gender"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="1">Male</option>
-            <option value="0">Female</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender:</label>
+                <select id="gender" name="gender" class="form-select" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
 
-        <label for="customer-type">Customer Type :</label>
-        <select id="customer-type" name="customer-type"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="0">Loyal Customer</option>
-            <option value="1">Disloyal Customer</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="customer-type" class="form-label">Customer Type:</label>
+                <select id="customer-type" name="customer-type" class="form-select" required>
+                    <option value="0">Loyal Customer</option>
+                    <option value="1">Disloyal Customer</option>
+                </select>
+            </div>
 
-        <label for="travel-type">Type of Travel :</label>
-        <select id="travel-type" name="travel-type"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="1">Personal Travel</option>
-            <option value="0">Business Travel</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="travel-type" class="form-label">Type of Travel:</label>
+                <select id="travel-type" name="travel-type" class="form-select" required>
+                    <option value="1">Personal Travel</option>
+                    <option value="0">Business Travel</option>
+                </select>
+            </div>
 
-        <label for="class-type">Class Type :</label>
-        <select id="class-type" name="class-type"
-            style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <option value="ECO">Economy</option>
-            <option value="ECO_PLUS">Economy Plus</option>
-            <option value="Bussuiness">Bussiness</option>
-        </select><br>
+            <div class="mb-3">
+                <label for="class-type" class="form-label">Class Type:</label>
+                <select id="class-type" name="class-type" class="form-select" required>
+                    <option value="ECO">Economy</option>
+                    <option value="ECO_PLUS">Economy Plus</option>
+                    <option value="Bussiness">Business</option>
+                </select>
+            </div>
 
-        <div class="d-flex justify-content-between">
-            <a class="btn btn-primary btn-lg" href="home.html" role="button">Back</a>
-            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        </div>
-    </form>
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-primary" href="home.html" role="button">Back</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-        }
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4; /* Light grey background for the page */
+        color: #333; /* Darker text color for better readability */
+    }
 
+    nav.navbar {
+        background-color: #343a40; /* Dark background for the navbar */
+    }
+
+    h2 {
+        margin-top: 130px;
+        text-align: center;
+        color: #333; /* Darker color for the heading text */
+    }
+
+    #contact-form {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff; /* White background for the form */
+        border: 1px solid #ddd; /* Lighter border color */
+        border-radius: 8px; /* Slightly less rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More subtle shadow */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px; /* Reduced margin for labels */
+        font-weight: bold; /* Bold labels for better emphasis */
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 12px; /* Slightly more padding for inputs and selects */
+        margin-bottom: 16px; /* Reduced margin for a tighter layout */
+        border: 1px solid #ccc; /* Light grey border */
+        border-radius: 4px; /* Slightly smaller border radius */
+        font-size: 16px; /* Increased font size for better readability */
+    }
+
+    .btn {
+        padding: 12px 24px; /* Increased padding for buttons */
+        border: none;
+        border-radius: 4px; /* Slightly smaller border radius */
+        cursor: pointer;
+        font-size: 16px; /* Larger font size for buttons */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker shade for hover effect */
+    }
+
+    @media (max-width: 768px) {
         #contact-form {
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px; /* Reduced margin for smaller screens */
+            padding: 15px; /* Reduced padding for smaller screens */
         }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input,
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: #0f6edb;
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0c5fbe;
-        }
+    }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
